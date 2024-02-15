@@ -1,0 +1,3 @@
+{
+  "extends": "@elestyle/typescript-config/base.json"
+}

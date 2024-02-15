@@ -1,0 +1,30 @@
+{
+  "name": "@elestyle/eslint-config",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "import": "./eslint.config.js"
+    }
+  },
+  "files": [
+    "eslint.config.js"
+  ],
+  "peerDependencies": {
+    "@elestyle/typescript-config": "workspace:*",
+    "eslint": "^8.56.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.56.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/node": "^22.13.14",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.28.0"
+  }
+}

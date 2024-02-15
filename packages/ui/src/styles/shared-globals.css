@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* 默认主题 Original - 蓝底 */
+  :root {
+    --background: 210 100% 50%; /* #118df0 */
+    --foreground: 0 0% 100%;
+  
+    --card: 210 100% 50%;
+    --card-foreground: 0 0% 100%;
+  
+    --border: 210 100% 40%;
+    --input: 210 100% 40%;
+  
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+  
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 210 100% 50%;
+  
+    --muted: 210 100% 94%;
+    --muted-foreground: 210 100% 30%;
+  
+    --accent: 210 100% 94%;
+    --accent-foreground: 210 100% 30%;
+  
+    --ring: 210 100% 60%;
+  
+    --radius: 0.75rem;
+  }
+  
+
+  /* ライトモード Light theme */
+  .theme-light {
+    --background: 210 40% 96%;
+    --foreground: 210 60% 20%;
+  
+    --card: 0 0% 100%;
+    --card-foreground: 210 60% 20%;
+  
+    --border: 210 30% 85%;
+    --input: 210 30% 85%;
+  
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+  
+    --secondary: 210 30% 90%;
+    --secondary-foreground: 210 60% 20%;
+  
+    --muted: 210 40% 94%;
+    --muted-foreground: 210 40% 40%;
+  
+    --accent: 210 30% 94%;
+    --accent-foreground: 210 40% 40%;
+  
+    --ring: 210 100% 70%;
+  }
+  
+
+  /* ダークモード Dark theme */
+  .theme-dark {
+    --background: 222 28% 12%;
+    --foreground: 0 0% 100%;
+  
+    --card: 222 28% 14%;
+    --card-foreground: 0 0% 100%;
+  
+    --border: 222 15% 25%;
+    --input: 222 15% 25%;
+  
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+  
+    --secondary: 222 15% 25%;
+    --secondary-foreground: 0 0% 100%;
+  
+    --muted: 222 15% 20%;
+    --muted-foreground: 222 20% 70%;
+  
+    --accent: 222 15% 20%;
+    --accent-foreground: 210 100% 80%;
+  
+    --ring: 210 100% 60%;
+  }
+  
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  // 保存时自动格式化
+  "editor.formatOnSave": true,
+
+  // 保存时自动修复 ESLint 报错（如 import 排序）
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // 使用 Flat Config 模式（如果你使用了）
+  "eslint.experimental.useFlatConfig": true,
+
+  // VSCode 中启用 ESLint 检查的语言
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"]
+}
