@@ -1,7 +1,8 @@
+import { Button } from '@elestyle/ui'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { useLanguageStore } from '../stores/useLanguageStore'
+import { useLanguageStore } from '@/stores/useLanguageStore'
 
 const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation()
@@ -15,12 +16,9 @@ const LanguageSwitcher: React.FC = () => {
   }
 
   return (
-    <button
-      className="px-3 py-1 text-sm bg-gray-200 rounded hover:bg-gray-300"
-      onClick={toggleLang}
-    >
+    <Button onClick={toggleLang} variant="secondary">
       {lang.startsWith('zh') ? '切换为 English' : 'Switch to 中文'}
-    </button>
+    </Button>
   )
 }
 

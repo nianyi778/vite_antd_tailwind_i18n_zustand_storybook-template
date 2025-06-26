@@ -1,9 +1,10 @@
-import { ActionSheet, Button } from '../.'
 import { useState } from 'react'
+
+import { ActionSheet, Button } from '../.'
 
 export default {
   title: 'UI/ActionSheet',
-  component: ActionSheet
+  component: ActionSheet,
 }
 
 export const Example = () => {
@@ -16,7 +17,7 @@ export const Example = () => {
         onOpenChange={setOpen}
         actions={[
           { label: '操作一', onClick: () => alert('操作一') },
-          { label: '操作二', onClick: () => alert('操作二') }
+          { label: '操作二', onClick: () => alert('操作二') },
         ]}
       />
     </>

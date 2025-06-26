@@ -1,0 +1,44 @@
+.theme-dark {
+  --background: 222 28% 26%; /* 主背景（#2b303b） */
+  --background-subtle: 222 28% 12%; /* 更暗层背景 */
+  --foreground: 0 0% 100%; /* 主文字：白 */
+
+  --border: 222 15% 25%; /* 通用边框灰蓝 */
+  --input: 222 15% 25%; /* 输入框边框 */
+
+  --primary: 222 28% 38%; /* 主色蓝灰（按钮/高亮） */
+  --primary-foreground: 0 0% 100%;
+  --primary-subtle: 222 28% 24%; /* hover 或浅层 */
+
+  --secondary: 222 15% 20%;
+  --secondary-foreground: 0 0% 100%;
+  --secondary-subtle: 222 15% 12%;
+
+  --muted: 222 10% 14%; /* 非核心区域背景 */
+  --muted-foreground: 222 12% 60%; /* 灰蓝文字 */
+  --muted-subtle: 222 10% 20%; /* hover 背景 */
+
+  --accent: 222 20% 30%; /* 更亮一点，更偏蓝灰 */
+  --accent-foreground: 222 20% 80%;
+  --accent-subtle: 222 20% 18%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --destructive-subtle: 0 84% 50%;
+
+  --ring: 210 100% 60%;
+
+  /* card */
+  --card: 222 20% 16%; /* 卡片底：略亮蓝灰 */
+  --card-foreground: 0 0% 100%;
+  --card-subtle: 222 20% 12%;
+
+  /* Custom */
+  --custom-total: 0 0% 100%;
+  --custom-total-foreground: 0 0% 0%;
+  --custom-total-subtle: 222 28% 26%;
+
+  --custom-active: 0 0% 100%;
+  --custom-active-foreground: 0 0% 0%;
+  --custom-active-subtle: 222 28% 26%;
+}

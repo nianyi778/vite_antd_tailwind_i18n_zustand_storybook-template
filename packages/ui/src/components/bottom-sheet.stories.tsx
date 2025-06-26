@@ -1,9 +1,10 @@
-import { BottomSheet, Button } from '../index'
 import { useState } from 'react'
+
+import { BottomSheet, Button } from '../index'
 
 export default {
   title: 'UI/BottomSheet',
-  component: BottomSheet
+  component: BottomSheet,
 }
 
 export const Example = () => {

@@ -1,14 +1,19 @@
-import { SegmentedControl } from './segmented-control'
 import { useState } from 'react'
+
+import { SegmentedControl } from './segmented-control'
 
 export default {
   title: 'UI/SegmentedControl',
-  component: SegmentedControl
+  component: SegmentedControl,
 }
 
 export const Example = () => {
   const [value, setValue] = useState('A')
   return (
-    <SegmentedControl options={['A', 'B', 'C']} value={value} onChange={setValue} />
+    <SegmentedControl
+      options={['A', 'B', 'C']}
+      value={value}
+      onChange={setValue}
+    />
   )
 }

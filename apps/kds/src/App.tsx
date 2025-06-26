@@ -1,6 +1,9 @@
-import { Button, SegmentedControl } from '@elestyle/ui'
+import { SegmentedControl } from '@elestyle/ui'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+
+import type { Theme } from '@/constants/theme'
+import { themeList } from '@/constants/theme'
 
 import LanguageSwitcher from './components/LanguageSwitcher'
 import i18n from './i18n'
@@ -22,11 +25,10 @@ const Home = () => {
   return (
     <div className="p-4 text-center">
       <SegmentedControl
-        options={['default', 'light', 'dark']}
+        options={themeList}
         value={theme}
-        onChange={(value) => setTheme(value)}
+        onChange={(value) => setTheme(value as Theme)}
       />
-      <Button>Hello from UI</Button>
       <LanguageSwitcher />
       <h1 className="text-2xl font-bold text-amber-900">{t('welcome')}</h1>
       <button onClick={setCookie}>set cookie</button>

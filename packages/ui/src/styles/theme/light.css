@@ -1,0 +1,43 @@
+.theme-light {
+  --background: 220 20% 96%;
+  --background-subtle: 210 22% 91%;
+  --foreground: 220 15% 20%;
+
+  --border: 220 10% 85%;
+  --input: 220 10% 85%;
+
+  --primary: 220 85% 95%; /* #edf4ff */
+  --primary-foreground: 220 20% 20%;
+  --primary-subtle: 220 60% 90%; /* 稍暗一些，做 hover 背景 */
+
+  --secondary: 0 0 100%;
+  --secondary-foreground: 220 15% 30%;
+  --secondary-subtle: 220 20% 88%;
+
+  --muted: 210 12% 88%; /* 更有层次的灰蓝 */
+  --muted-foreground: 210 12% 40%;
+  --muted-subtle: 210 10% 96%;
+
+  --accent: 230 20% 92%; /* 更明显的蓝紫调 */
+  --accent-foreground: 230 20% 40%;
+  --accent-subtle: 230 20% 96%;
+
+  --ring: 220 30% 75%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --destructive-subtle: 0 84% 50%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 28% 12%;
+  --card-subtle: 0 0% 96%; /* 替代深色 */
+
+  /* Custom 保持不变 */
+  --custom-total: 17 89% 55%;
+  --custom-total-foreground: 0 0% 100%;
+  --custom-total-subtle: 0 0% 100%;
+
+  --custom-active: 210 100% 50%;
+  --custom-active-foreground: 0 0% 100%;
+  --custom-active-subtle: 0 0% 80%;
+}

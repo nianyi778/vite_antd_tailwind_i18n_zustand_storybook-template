@@ -5,19 +5,42 @@ import { devtools, persist } from 'zustand/middleware'
 const isDev = process.env.NODE_ENV === 'development'
 
 // 通用封装函数：支持 devtools / persist（可选）
-export function createStore<T>(creator: StateCreator<T>, name: string) {
-  const withDevtools: StateCreator<T, [], []> = isDev
-    ? (devtools(creator, { name }) as StateCreator<T, [], []>)
-    : creator
+export function createStore<T extends object>(
+  creator: StateCreator<T>,
+  name: string,
+) {
+  let initialState: T
 
-  return create<T>(withDevtools)
+  const enhancedCreator: StateCreator<T & { clear: () => void }> = (
+    set,
+    get,
+    api,
+  ) => {
+    const store = creator(set, get, api)
+    initialState = { ...store }
+
+    return {
+      ...store,
+      clear: () => {
+        set(initialState)
+      },
+    }
+  }
+
+  const withDevtools = isDev
+    ? (devtools(enhancedCreator, { name }) as StateCreator<
+        T & { clear: () => void }
+      >)
+    : enhancedCreator
+
+  return create<T & { clear: () => void }>(withDevtools)
 }
 
 export function createPersistentStore<T>(
   store: StateCreator<T, [['zustand/persist', unknown]], []>,
   name: string,
 ) {
-  const persistWrapped = persist(store, { name: `store-${name}` })
+  const persistWrapped = persist(store, { name: `kds-store-${name}` })
   const withDevtools = isDev
     ? devtools(persistWrapped, { name })
     : persistWrapped

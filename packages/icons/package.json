@@ -1,0 +1,23 @@
+{
+  "name": "@elestyle/icons",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "src/index.tsx",
+  "exports": {
+    ".": {
+      "import": "./src/index.tsx"
+    }
+  },
+  "dependencies": {
+    "lucide-react": "^0.350.0",
+    "@elestyle/prettier-config": "workspace:*",
+    "@elestyle/eslint-config": "workspace:*",
+    "@elestyle/tailwind-config": "workspace:*",
+    "@elestyle/typescript-config": "workspace:*",
+    "@elestyle/utils": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}

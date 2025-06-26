@@ -1,9 +1,15 @@
-interface Props {
+import * as React from 'react'
 
+export interface {{ pascalCase name }}Props {
+  
 }
 
-export const {{ pascalCase name }} = (props: Props) => {
-  return (
-    <div></div>
-  );
-};
+export const {{ pascalCase name }} = React.forwardRef<HTMLDivElement, {{ pascalCase name }}Props>(
+  (props, ref) => {
+    return (
+      <div ref={ref}></div>
+    )
+  }
+)
+
+{{ pascalCase name }}.displayName = '{{ pascalCase name }}'

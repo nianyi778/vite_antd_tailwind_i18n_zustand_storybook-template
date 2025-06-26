@@ -1,0 +1,55 @@
+{
+  "name": "wait",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "format": "prettier --write .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@elestyle/icons": "workspace:*",
+    "@elestyle/ui": "workspace:*",
+    "@heroicons/react": "2.1.1",
+    "@types/node": "^22.13.13",
+    "i18next": "^24.2.3",
+    "i18next-browser-languagedetector": "^8.0.4",
+    "react-i18next": "^15.4.1",
+    "react-router": "^7.4.1",
+    "react-router-dom": "^7.4.1",
+    "zustand": "^5.0.3",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "@elestyle/eslint-config": "workspace:*",
+    "@elestyle/prettier-config": "workspace:*",
+    "@elestyle/tailwind-config": "workspace:*",
+    "@elestyle/typescript-config": "workspace:*",
+    "@elestyle/utils": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "@vitejs/plugin-legacy": "^6.0.2",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "autoprefixer": "10.4.17",
+    "eslint": "8.56.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.5",
+    "postcss": "8.4.35",
+    "unplugin-version-injector": "2.0.0",
+    "class-variance-authority": "^0.7.1",
+    "postcss-px-to-viewport": "^1.1.1",
+    "tailwindcss": "3.4.1",
+    "typescript": "5.2.2",
+    "vite": "^6.2.0"
+  },
+  "browserslist": [
+    "Chrome >= 66",
+    "Safari >= 13",
+    "iOS >= 12",
+    "Android >= 8",
+    "last 2 ChromeAndroid versions"
+  ]
+}

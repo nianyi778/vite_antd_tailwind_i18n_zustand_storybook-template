@@ -1,0 +1,53 @@
+:root {
+  /* 基础背景与文字 */
+  --background: 210 100% 50%; /* 主背景：蓝色主色调（#118df0） */
+  --background-subtle: 210 100% 30%; /* 次背景：更深蓝，用于卡片、条等 */
+  --foreground: 0 0% 100%; /* 前景文字：白色 */
+
+  /* 表单/边框 */
+  --border: 210 100% 75%; /* 较浅蓝，用于边框 */
+  --input: 210 100% 80%; /* 输入框边框/背景色 */
+
+  /* 主色（Primary） */
+  --primary: 210 100% 50%; /* 主按钮、主色 */
+  --primary-foreground: 0 0% 100%; /* 按钮文字色：白色 */
+  --primary-subtle: 210 100% 40%; /* hover 或 lighter 层级 */
+
+  /* 次色（Secondary） */
+  --secondary: 210 60% 96%; /* 浅蓝灰 */
+  --secondary-foreground: 210 20% 30%; /* 深蓝灰文字 */
+  --secondary-subtle: 210 60% 92%; /* hover 用于按钮或卡片 */
+
+  /* 静默色（Muted） */
+  --muted: 210 10% 94%; /* 淡灰蓝底 */
+  --muted-foreground: 210 15% 50%; /* 灰蓝文字 */
+  --muted-subtle: 210 10% 97%; /* hover 背景 */
+
+  /* 强调色（Accent） */
+  --accent: 210 80% 90%; /* 亮蓝灰背景（用于强调卡片/按钮） */
+  --accent-foreground: 210 20% 40%; /* 对比前景 */
+  --accent-subtle: 210 80% 94%; /* hover 层级 */
+
+  /* 危险色系（Destructive） */
+  --destructive: 0 84% 60%; /* 错误状态背景 */
+  --destructive-foreground: 0 0% 100%; /* 错误状态文字 */
+  --destructive-subtle: 0 84% 50%; /* hover/禁用状态 */
+
+  /* Card 背景 */
+  --card: 0 0% 100%; /* 卡片背景：白色 */
+  --card-foreground: 222 28% 12%; /* 卡片文字 */
+  --card-subtle: 210 20% 94%; /* 卡片 hover 或列表背景 */
+
+  /* 自定义颜色（Custom） */
+  --custom-total: 0 0% 100%;
+  --custom-total-foreground: 210 100% 30%;
+  --custom-total-subtle: 210 100% 30%;
+
+  --custom-active: 0 0% 100%;
+  --custom-active-foreground: 210 100% 50%;
+  --custom-active-subtle: 210 100% 30%;
+
+  /* 其他 */
+  --ring: 210 100% 60%;
+  --radius: 0.75rem;
+}

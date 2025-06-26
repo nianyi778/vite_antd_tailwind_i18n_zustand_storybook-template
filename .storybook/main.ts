@@ -1,42 +1,39 @@
-import type { StorybookConfig } from '@storybook/react-vite';
-import { join, dirname } from "path"
-import tailwindConfig from './tailwind.config.ts'
+import type { StorybookConfig } from "@storybook/react-vite";
+import { join, dirname } from "path";
+import tailwindConfig from "./tailwind.config";
 
-/**
-* This function is used to resolve the absolute path of a package.
-* It is needed in projects that use Yarn PnP or are set up within a monorepo.
-*/
-function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, 'package.json')))
+// 解决 monorepo 中包路径问题
+function getAbsolutePath(pkg: string) {
+  return dirname(require.resolve(join(pkg, "package.json")));
 }
+
 const config: StorybookConfig = {
-  "stories": [
-    "../stories/**/*.mdx",
-    "../apps/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-    "../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  stories: [
+    "../packages/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+    "../apps/**/*.stories.@(js|jsx|ts|tsx|mdx)",
   ],
-  "addons": [
-    getAbsolutePath('@storybook/addon-essentials'),
-    getAbsolutePath('@chromatic-com/storybook'),
-    getAbsolutePath("@storybook/experimental-addon-test")
+  addons: [
+    getAbsolutePath("@storybook/addon-themes"),
+    getAbsolutePath("@storybook/addon-essentials"),
+    getAbsolutePath("@chromatic-com/storybook"),
+    getAbsolutePath("@storybook/experimental-addon-test"),
   ],
-  "framework": {
-    "name": getAbsolutePath('@storybook/react-vite'),
-    "options": {}
+  framework: {
+    name: getAbsolutePath("@storybook/react-vite"),
+    options: {},
   },
-  viteFinal: async (config, { configType }) => {
-    // 👇 添加 PostCSS 支持（默认自动处理）
+  viteFinal: async (config) => {
     return {
       ...config,
       css: {
         postcss: {
           plugins: [
-            require('../apps/kds/node_modules/tailwindcss')(tailwindConfig),
-            require('../apps/kds/node_modules/autoprefixer')
-          ]
-        }
-      }
-    }
-  }
+            require("tailwindcss")(tailwindConfig),
+            require("autoprefixer"),
+          ],
+        },
+      },
+    };
+  },
 };
 export default config;

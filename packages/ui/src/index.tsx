@@ -1,6 +1,11 @@
 // components
-export * from "./components/button";
-export * from "./components/toast";
-export * from "./components/action-sheet";
-export * from "./components/bottom-sheet";
-export * from "./components/segmented-control";
+export * from './components/action-sheet'
+export * from './components/bottom-sheet'
+export * from './components/button'
+export * from './components/loading'
+export * from './components/modal'
+export * from './components/segmented-control'
+export * from './components/space'
+export * from './components/switch'
+export * from './components/toast'
+export * from './components/typography'

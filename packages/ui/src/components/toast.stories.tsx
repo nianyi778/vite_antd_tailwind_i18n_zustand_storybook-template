@@ -1,9 +1,10 @@
-import { Toast } from './toast'
 import { useState } from 'react'
+
+import { Toast } from './toast'
 
 export default {
   title: 'UI/Toast',
-  component: Toast
+  component: Toast,
 }
 
 export const Example = () => {

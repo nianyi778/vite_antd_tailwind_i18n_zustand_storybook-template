@@ -1,18 +1,28 @@
-interface SegmentedControlProps {
+import * as React from 'react'
+
+export interface SegmentedControlProps {
   options: string[]
   value: string
   onChange: (v: string) => void
 }
 
-export function SegmentedControl({ options, value, onChange }: SegmentedControlProps) {
+export const SegmentedControl = React.forwardRef<
+  HTMLDivElement,
+  SegmentedControlProps
+>(({ options, value, onChange }, ref) => {
   return (
-    <div className="flex items-center justify-center rounded-lg bg-muted p-1 text-sm">
+    <div
+      ref={ref}
+      className="flex items-center justify-center rounded-lg bg-muted p-1 text-sm"
+    >
       {options.map((opt) => (
         <button
           key={opt}
           onClick={() => onChange(opt)}
-          className={`px-3 py-1.5 rounded-md transition-colors ${
-            opt === value ? 'bg-primary text-primary-foreground' : 'text-muted-foreground'
+          className={`rounded-md px-3 py-1.5 transition-colors ${
+            opt === value
+              ? 'bg-primary text-primary-foreground shadow-md'
+              : 'text-muted-foreground hover:bg-accent'
           }`}
         >
           {opt}
@@ -20,4 +30,6 @@ export function SegmentedControl({ options, value, onChange }: SegmentedControlP
       ))}
     </div>
   )
-}
+})
+
+SegmentedControl.displayName = 'SegmentedControl'
