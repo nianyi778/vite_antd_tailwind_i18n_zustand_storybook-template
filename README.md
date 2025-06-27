@@ -1,4 +1,4 @@
-# OneQR KDS · Frontend Monorepo
+# OneQR KDS · Frontend Monorepo ss
 
 [🇨🇳 中文 README](./README.zh-CN.md) | [🇬🇧 English README](./README.md)
 
