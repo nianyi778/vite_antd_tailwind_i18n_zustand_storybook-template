@@ -47,7 +47,7 @@ export default function Setting() {
       <Modal open={open} onOpenChange={setOpen}>
         <div className="flex flex-col items-center justify-center">
           <div className="flex-1">弹窗内容在这里显示</div>
-          <div className="w-2/4">
+          <div className="flex w-2/4 items-center justify-center">
             <Button onClick={() => setOpen(false)}>确认</Button>
           </div>
         </div>

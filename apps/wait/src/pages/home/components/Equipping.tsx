@@ -10,10 +10,10 @@ export default function Equipping() {
       <div className="content flex-1">
         <EquippingContent />
       </div>
-      <div className="total bg-custom-total text-custom-total-foreground flex h-8 items-center justify-center rounded-md">
+      <div className="total flex h-8 items-center justify-center rounded-md bg-custom-total text-custom-total-foreground">
         <p className="flex items-center rounded-sm text-base font-semibold">
           お待ちの人数
-          <span className="bg-custom-total-subtle text-custom-total mx-1 rounded-sm px-2 text-xl leading-tight">
+          <span className="mx-1 rounded-sm bg-custom-total-subtle px-2 text-xl leading-tight text-custom-total">
             31
           </span>
           名

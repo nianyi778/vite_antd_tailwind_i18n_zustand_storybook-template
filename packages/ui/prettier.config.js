@@ -1,3 +1,3 @@
-import config from "@elestyle/prettier-config"
+import config from '@elestyle/prettier-config'
 
 export default config

@@ -21,7 +21,7 @@ export const BottomSheet = React.forwardRef<HTMLDivElement, BottomSheetProps>(
       onOpenChange,
       ...props
     },
-    ref
+    ref,
   ) => {
     const [isVisible, setIsVisible] = React.useState(open)
 
@@ -38,7 +38,7 @@ export const BottomSheet = React.forwardRef<HTMLDivElement, BottomSheetProps>(
       <Dialog.Root open={open} onOpenChange={onOpenChange} {...props}>
         {isVisible && (
           <Dialog.Portal>
-            <Dialog.Overlay className="fixed inset-0 bg-black/40 z-40" />
+            <Dialog.Overlay className="fixed inset-0 z-40 bg-black/40" />
             <Dialog.Content
               ref={ref}
               aria-describedby="bottom-sheet-desc"
@@ -54,14 +54,14 @@ export const BottomSheet = React.forwardRef<HTMLDivElement, BottomSheetProps>(
               <Dialog.Description id="bottom-sheet-desc" className="sr-only">
                 {description}
               </Dialog.Description>
-              <div className="h-1.5 w-10 bg-muted rounded-full mx-auto mb-4" />
+              <div className="mx-auto mb-4 h-1.5 w-10 rounded-full bg-muted" />
               {children}
             </Dialog.Content>
           </Dialog.Portal>
         )}
       </Dialog.Root>
     )
-  }
+  },
 )
 
 BottomSheet.displayName = 'BottomSheet'

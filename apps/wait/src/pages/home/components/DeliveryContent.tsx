@@ -21,7 +21,7 @@ export default function DeliveryContent({
 }) {
   const mockData = useMemo(
     () =>
-      Array.from({ length: 32 }, (_, i) => ({
+      Array.from({ length: 12 }, (_, i) => ({
         id: i + 1,
         name: `k${i + 1}`,
         status: '002',
@@ -54,7 +54,7 @@ export default function DeliveryContent({
   return (
     <div className="flex h-full flex-col overflow-hidden px-4 py-4 pt-2 text-xl">
       {theme === 'obvious' && headItem && (
-        <div className="bg-custom-active text-custom-active-foreground mb-2 flex h-1/3 items-center justify-center rounded-lg text-6xl font-bold">
+        <div className="mb-2 flex h-1/3 items-center justify-center rounded-lg bg-custom-active text-6xl font-bold text-custom-active-foreground">
           <span>{headItem.status}</span>
           <span>{headItem.name}</span>
         </div>
@@ -64,7 +64,7 @@ export default function DeliveryContent({
         {restItems.map((item) => (
           <div
             key={item.id}
-            className="bg-custom-active text-custom-active-foreground flex items-center justify-center rounded-md font-semibold"
+            className="flex items-center justify-center rounded-md bg-custom-active font-semibold text-custom-active-foreground"
           >
             <span>{item.status}</span>
             <span>{item.name}</span>

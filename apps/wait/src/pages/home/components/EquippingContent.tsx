@@ -20,10 +20,10 @@ const EquippingContentVariants = cva('grid h-full ', {
 export default function EquippingContent() {
   const mockData = useMemo(
     () =>
-      Array.from({ length: 35 }, (_, i) => ({
+      Array.from({ length: 12 }, (_, i) => ({
         id: i + 1,
         name: `k${i + 1}`,
-        status: '002',
+        status: '002-果子',
       })),
     [],
   )

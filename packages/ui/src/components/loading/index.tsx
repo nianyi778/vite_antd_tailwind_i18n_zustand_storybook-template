@@ -9,7 +9,7 @@ export const Loading = ({ size = 24, className }: LoadingProps) => {
   return (
     <div
       className={cn(
-        'animate-spin border-t-transparent rounded-full border-2 border-primary',
+        'animate-spin rounded-full border-2 border-primary border-t-transparent',
         className,
       )}
       style={{
